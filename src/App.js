@@ -17,19 +17,30 @@ const App = () => {
 
     getData();
   }, [])
+
+  const returnList = () => {
+    const list = apiData.map((item) => {
+      return (
+        <div className="item">
+          <h1><a href={item.url}>{item.title}</a></h1>
+          <img src={item.thumbnailUrl} />
+          <hr />
+        </div>
+      )
+    })
+
+    return list;
+  }
+
+  const loadingRender = () => {
+    return (loading && <div id="loading-container"><span>Loading...</span></div>)
+  }
+
   return (
     <div className="App">
       <div id="container">
-        {loading && <div id="loading-container"><span>Loading...</span></div>}
-        {apiData.map((item) => {
-          return (
-            <div className="item">
-              <h1><a href={item.url}>{item.title}</a></h1>
-              <img src={item.thumbnailUrl} />
-              <hr />
-            </div>
-          )
-        })}
+        {loadingRender()}
+        {returnList()}
       </div>
     </div>
   );
