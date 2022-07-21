@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className="App">
       <div id="container">
-        {loading && <div id="loading-container"><span id="loading">Loading...</span></div>}
+        {loading && <div id="loading-container"><span>Loading...</span></div>}
         {apiData.map((item) => {
           return (
             <div className="item">

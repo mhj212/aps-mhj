@@ -1,4 +1,4 @@
-import {render, fireEvent, waitFor, screen} from '@testing-library/react'
+import { render, fireEvent, waitFor, screen } from '@testing-library/react'
 import App from './App';
 
 test('list is generated', async () => {
