@@ -1,6 +1,6 @@
 Hello!
 
-Welcome to my APS app.
+Welcome to my APS code challenge app.
 
 To run:
 npm start
