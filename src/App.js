@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -22,7 +21,7 @@ const App = () => {
     const list = apiData.map((item) => {
       return (
         <div className="item">
-          <h1><a href={item.url}>{item.title}</a></h1>
+          <h1><a target="_blank" href={item.url}>{item.title}</a></h1>
           <img src={item.thumbnailUrl} />
           <hr />
         </div>
